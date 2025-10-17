@@ -5,7 +5,7 @@ export async function POST(request: NextRequest) {
     const { title, description, payload, currency, prices } = await request.json();
 
     // Замените process.env.BOT_TOKEN на реальный токен вашего бота
-    const botToken = "7638201917:AAF5JLBnwubw_mDwPJQlMzjz9DCasf4RlZA";
+    const botToken = "8225822796:AAH9zJC4FzN7nttzL_Stqsw7QwDpEZYH61o";
     if (!botToken) {
       return NextResponse.json(
         { error: 'BOT_TOKEN is not configured' },
@@ -46,4 +46,5 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     );
   }
+
 }
