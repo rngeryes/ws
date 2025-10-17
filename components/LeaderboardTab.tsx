@@ -224,7 +224,7 @@ const ProfileTab = () => {
               animate={{ y: 0 }}
               exit={{ y: '100%' }}
               transition={{ type: 'spring', stiffness: 120, damping: 20 }}
-              className="relative w-full max-w-md min-h-[60%] max-h-[90%] bg-[#1f1f1f] rounded-t-3xl md:rounded-3xl p-6 flex flex-col items-center z-10 overflow-y-auto"
+              className="relative w-full max-w-md min-h-[85%] max-h-[95%] bg-[#1f1f1f] rounded-t-3xl md:rounded-3xl p-6 flex flex-col items-center z-10 overflow-y-auto"
             >
               <div className="absolute top-2 left-1/2 -translate-x-1/2 w-14 h-1.5 rounded-full bg-white/30" />
               <div className="w-[95%] h-48 rounded-2xl bg-gradient-to-br from-gray-400/30 via-gray-200/10 to-transparent flex items-center justify-center mb-6 mt-6">
