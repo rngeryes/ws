@@ -66,7 +66,7 @@ const ProfileTab = () => {
   const fetchUserGifts = async (telegramId: number) => {
     try {
       setLoading(true)
-      const response = await fetch(`http://localhost:5000/api/user/${telegramId}/gifts`)
+      const response = await fetch(`http://77.110.112.93:5000/api/user/${telegramId}/gifts`)
       if (response.ok) {
         const gifts: UserGift[] = await response.json()
         setUserGifts(gifts.map(gift => ({
@@ -85,7 +85,7 @@ const ProfileTab = () => {
 
   const fetchGiftStatus = async (giftId: string) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/gift/${giftId}/status`)
+      const res = await fetch(`http://77.110.112.93:5000/api/gift/${giftId}/status`)
       if (!res.ok) throw new Error('Failed to fetch gift status')
       return await res.json()
     } catch (err) {
