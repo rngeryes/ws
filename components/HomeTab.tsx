@@ -145,7 +145,7 @@ const FriendsTab = () => {
 
   const fetchGifts = async () => {
     try {
-      const response = await fetch('http://77.110.112.93/:5000/api/gifts');
+      const response = await fetch('/api/gifts');
       if (response.ok) {
         const giftsData = await response.json();
         setGiftsList(
@@ -166,7 +166,7 @@ const FriendsTab = () => {
 
   const fetchRecentPurchases = async () => {
     try {
-      const response = await fetch('http://77.110.112.93:5000/api/recent-purchases');
+      const response = await fetch('/api/recent-purchases');
       if (response.ok) {
         const purchases = await response.json();
         setRecentPurchases(purchases);
@@ -231,7 +231,7 @@ const FriendsTab = () => {
       if (window.Telegram?.WebApp?.openInvoice) {
         window.Telegram.WebApp.openInvoice(invoiceLink, async (status: string) => {
           if (status === 'paid') {
-            const purchaseResponse = await fetch('http://77.110.112.93:5000/api/purchase', {
+            const purchaseResponse = await fetch('/api/purchase', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
