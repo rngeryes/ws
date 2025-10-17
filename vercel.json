@@ -1,6 +1,10 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
   "routes": [
+    {
+      "src": "/api/create-invoice",
+      "dest": "/app/api/create-invoice/route.ts"
+    },
     {
       "src": "/api/(.*)",
       "dest": "http://77.110.112.93:5000/api/$1"
